@@ -1,81 +1,68 @@
-/* auth.css */
-
 .auth-form {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
-    padding: 1.5em; 
+    padding: 2rem 1.5rem; 
     border-radius: 10px;
-    width: 500px;    
-    max-width: 90%;
+    width: 95%;    
+    max-width: 450px;
     margin: 0 auto;
     text-align: center;
+    box-sizing: border-box;
     box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
 }
 
 .auth-form h2 {
     margin-bottom: 1em;
-    font-size: 1.8em;
+    font-size: 1.5rem;
     color: #eee;
     text-shadow: 0 0 5px #f0f;
 }
 
 .form-group {
-    display: flex; /* Use flexbox to align label and input */
-    align-items: center; /* Vertically align label and input */
-    margin-bottom: 1em; /* Reduced margin */
+    display: flex;
+    flex-direction: column; /* Stack for mobile */
+    margin-bottom: 1.2rem;
+    text-align: left;
 }
 
 .form-group label {
-    flex-basis: 30%; /* Adjust label width as needed */
-    margin-right: 1em; /* Add space between label and input */
-    margin-bottom: 0; /* Remove bottom margin */
-    text-align: left;
+    margin-bottom: 0.5rem;
     color: #ddd;
 }
 
 .form-group input {
-    flex-basis: 70%; /* Adjust input width as needed */
-    padding: 0.6em; /* Reduced padding */
+    padding: 0.8rem;
     border: none;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.1);
     color: #fff;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 1em;
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .form-group input:focus {
     outline: none;
-    box-shadow: 0 0 5px #00BFFF; /* Blue focus highlight */
+    box-shadow: 0 0 5px #00BFFF;
 }
 
 .auth-form button {
     width: 100%;
-    
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    padding: 0.7em;
+    padding: 0.8rem;
+    margin-top: 1rem;
 }
 
-.signup-link,
-.login-link {
-    margin-top: 1.5em;
-    font-size: 0.9em;
-    color: #bbb;
+/* Tablet/Desktop layout */
+@media (min-width: 600px) {
+    .form-group {
+        flex-direction: row;
+        align-items: center;
+    }
+    .form-group label {
+        flex-basis: 30%;
+        margin-bottom: 0;
+    }
+    .form-group input {
+        flex-basis: 70%;
+    }
 }
-
-.signup-link a,
-.login-link a {
-    color: #FF69B4; /* Neon Pink */
-    text-decoration: none;
-}
-
-.signup-link a:hover,
-.login-link a:hover {
-    text-decoration: underline;
-}
-
-/* Inherit button styles from style.css for consistency */
