@@ -68,6 +68,7 @@
 
     + Responsiveness: 100% (Mobile Ready)
     + UI Aesthetic: Neon Overload
+    - Folder structure is Really messy 
 
 ---
 
