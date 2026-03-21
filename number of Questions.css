@@ -85,3 +85,35 @@
     text-align: center; /* Keep the text centered inside the card */
     text-shadow: 0 0 3px #00BFFF;
 }
+
+/* Responsive adjustments for the question/difficulty selection */
+@media (max-width: 600px) {
+    #question-selection h2 {
+        font-size: 1.4em;     /* Smaller heading for mobile */
+        margin-top: 1em;
+    }
+
+    .card-container {
+        gap: 1em;             /* Tighten the space between cards */
+        padding: 0 10px;      /* Prevent cards from touching the screen edges */
+    }
+
+    .question-card, .difficulty-card {
+        width: 140px;         /* Smaller cards so two might fit side-by-side */
+        height: 120px;        /* Shorter height for mobile */
+        padding: 1em;
+    }
+
+    .question-card .card-title, .difficulty-card .card-title {
+        font-size: 1.1em;     /* Smaller text inside the cards */
+    }
+}
+
+/* For very tiny screens (portrait mode) */
+@media (max-width: 350px) {
+    .question-card, .difficulty-card {
+        width: 100%;          /* Stack cards one by one if the screen is super narrow */
+        height: auto;
+        min-height: 80px;
+    }
+}

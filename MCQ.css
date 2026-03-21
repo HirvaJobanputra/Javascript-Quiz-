@@ -32,3 +32,19 @@
 }
 
 .answer-button:hover { background-color: rgba(255, 0, 255, 0.2); }
+
+/* Ensure the quiz area doesn't feel cramped on mobile */
+@media (max-width: 480px) {
+    #quiz-area {
+        padding: 1rem;    /* Less padding so the text has more room */
+    }
+
+    .answer-button {
+        padding: 0.8rem;  /* Slightly smaller buttons for small screens */
+        font-size: 0.9rem;
+    }
+
+    #next-button {
+        width: 100%;      /* Makes the 'Next' button easy to hit on a phone */
+    }
+}

@@ -48,3 +48,18 @@
     font-size: 1.1em;
     text-shadow: 0 0 3px #00BFFF;
 }
+
+/* Special rules for phones (screens smaller than 600px) */
+@media (max-width: 600px) {
+    .neon-text, .glitch {
+        font-size: 1.5rem; /* Shrinks the title so it doesn't wrap weirdly */
+    }
+
+    .slogan {
+        font-size: 1.2rem;
+    }
+
+    .quiz-card {
+        padding: 0.8em;   /* Gives more room for the content */
+    }
+}
